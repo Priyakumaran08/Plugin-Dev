@@ -15,3 +15,17 @@
 if(!defined('WPINC')){
     exit("Can't access this file directly");
 }
+
+//define plugin constants
+define("DEVY_GALLERY_PLUGIN_VERSION", time());
+
+//plugin file
+define("DEVY_GALLERY_PLUGIN_FILE", __FILE__);
+
+//plugin directory
+define("DEVY_GALLERY_PLUGIN_DIR", dirname(DEVY_GALLERY_PLUGIN_FILE));
+
+//plugin url
+define("DEVY_GALLERY_PLUGIN_URL", plugins_url('', DEVY_GALLERY_PLUGIN_FILE));
+
+echo DEVY_GALLERY_PLUGIN_FILE;
