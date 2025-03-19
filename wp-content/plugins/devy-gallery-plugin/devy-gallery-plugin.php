@@ -29,7 +29,7 @@ define("DEVY_GALLERY_PLUGIN_DIR", dirname(DEVY_GALLERY_PLUGIN_FILE));
 define("DEVY_GALLERY_PLUGIN_URL", plugins_url('', DEVY_GALLERY_PLUGIN_FILE));
 
 //check if class exists
-if(!class_exists('DevyGalleryPlugin')){
+if(!class_exists('Devy_Gallery_Plugin')){
     //include the class file
     include_once DEVY_GALLERY_PLUGIN_DIR _ 'includes/class-devy-gallery-plugin.php';
 }
