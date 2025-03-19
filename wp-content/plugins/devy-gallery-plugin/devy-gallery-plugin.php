@@ -10,3 +10,8 @@
  * License URL: http://www.gnu.org/licenses/gpl-2.0.txt
  * text-domain: devy-galler-plugin
 */
+
+//check if file is access directly
+if(!defined('WPINC')){
+    exit("Can't access this file directly");
+}
