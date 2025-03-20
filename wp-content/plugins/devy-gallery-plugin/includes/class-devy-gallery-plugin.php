@@ -9,11 +9,12 @@
 */
 
 class Devy_Gallery_Plugin{
-    public function __construct(){
+    public function init(){
         echo("inside class");
     }
     
 }
 
 //init
-new Devy_Gallery_Plugin();
+$init = new Devy_Gallery_Plugin();
+$init->init();
