@@ -9,10 +9,22 @@
 */
 
 class Devy_Gallery_Plugin{
+
     public function init(){
-        echo("inside class");
+        //add action
+        add_action('init', array($this, 'registerPostType'));
     }
-    
+
+    public function registerPostType(){
+        //args
+        $args = [
+            'label'=>"Devy Gallery Plugin",
+            'description' => "Devy Gallery Plugin for Plugindevs",
+            'show_ui' => true,
+        ];
+        
+        register_post_type('devy_gallery_plugin', $args);
+    }
 }
 
 //init
