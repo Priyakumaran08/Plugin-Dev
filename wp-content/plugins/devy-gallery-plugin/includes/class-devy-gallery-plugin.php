@@ -41,6 +41,7 @@ class Devy_Gallery_Plugin{
             'labels' => $labels,
             'description' => "Devy Gallery Plugin for Plugindevs",
             'show_ui' => true,
+            'supports' =>['title']
         ];
         
         register_post_type('devy_gallery_plugin', $args);
