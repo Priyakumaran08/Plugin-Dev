@@ -13,6 +13,22 @@ class Devy_Gallery_Plugin{
     public function init(){
         //add action
         add_action('init', array($this, 'registerPostType'));
+        //add metabox
+        add_action('add_meta_boxes', array($this, 'addMetaBox'));
+    }
+
+    //add metabox
+
+    public function addMetaBox(){
+        add_meta_box{
+            'Devy_gallery_meta_box',
+            'Devy Gallery',
+            array($this, 'renderMetaBox'),
+            'devy_gallery',
+            'normal',
+            'high'
+        };
+
     }
 
     public function registerPostType(){
