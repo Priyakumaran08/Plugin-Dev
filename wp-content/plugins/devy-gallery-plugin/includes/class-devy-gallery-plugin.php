@@ -20,14 +20,14 @@ class Devy_Gallery_Plugin{
     //add metabox
 
     public function addMetaBox(){
-        add_meta_box{
+        add_meta_box(
             'Devy_gallery_meta_box',
             'Devy Gallery',
             array($this, 'renderMetaBox'),
             'devy_gallery',
             'normal',
             'high'
-        };
+        );
 
     }
 
@@ -48,7 +48,7 @@ class Devy_Gallery_Plugin{
             'search_items'       => 'Search Galleries',
             'parent_item_colon'  => 'Parent Gallery:',
             'not_found'          => 'No Gallery found.',
-            'not_found_in_trash' => 'No Gallery found in Trash.',
+            'not_found_in_trash' => 'No Gallery found in Trash.'
         ];
         
         //args
