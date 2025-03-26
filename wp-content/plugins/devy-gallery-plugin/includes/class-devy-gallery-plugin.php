@@ -24,11 +24,16 @@ class Devy_Gallery_Plugin{
             'Devy_gallery_meta_box',
             'Devy Gallery',
             array($this, 'renderMetaBox'),
-            'devy_gallery',
+            'devy_gallery_plugin',
             'normal',
             'high'
         );
 
+    }
+
+    //metabox
+    public function renderMetaBox($post){
+        echo 'Hello!!';
     }
 
     public function registerPostType(){
