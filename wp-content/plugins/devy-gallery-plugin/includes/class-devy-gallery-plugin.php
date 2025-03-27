@@ -22,7 +22,7 @@ class Devy_Gallery_Plugin{
     public function addMetaBox(){
         add_meta_box(
             'Devy_gallery_meta_box',
-            'Devy Gallery',
+            'Add Image',
             array($this, 'renderMetaBox'),
             'devy_gallery_plugin',
             'normal',
@@ -33,7 +33,8 @@ class Devy_Gallery_Plugin{
 
     //metabox
     public function renderMetaBox($post){
-        echo 'Hello!!';
+        ob_start();
+        include_once DEVY_GALLERY_PLUGIN_DIR . '/templates/add_images.php';
     }
 
     public function registerPostType(){
