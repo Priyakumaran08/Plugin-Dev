@@ -628,7 +628,14 @@ function my_custom_portfolio_item() {
   $labels = array(
     'name'               => _x( 'Portfolio items', 'post type general name' ),
     'singular_name'      => _x( 'Portfolio item', 'post type singular name' ),
-    'menu_name'          => 'Portfolio'
+    'menu_name'          => 'Portfolio',
+	'add_new'            => 'Add New',
+	'add_new_item'       => 'Add New Portfolio',
+	'edit_item'          => 'Edit Portfolio',
+	'view_item'          => 'View Portfolio',
+    'search_items'       => 'Search Portfolio',
+    'not_found'          => 'No Portfolio found',
+    'not_found_in_trash' => 'No Portfolio found in Trash'
   );
     $args = array(
     'labels'        => $labels,
