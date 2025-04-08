@@ -35,6 +35,8 @@ class Devy_Gallery_Plugin{
     public function renderMetaBox($post){
         ob_start();
         include_once DEVY_GALLERY_PLUGIN_DIR . '/templates/add_images.php';
+        $output = ob_get_clean();
+        echo $output;
     }
 
     public function registerPostType(){
