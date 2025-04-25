@@ -1,0 +1,13 @@
+/*
+Theme Name:     Twenty Twenty-Four Child
+Template:       twentytwentyfour
+Version:        1.0.0
+*/
+
+@import url("../twentytwentyfour/style.css");
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
