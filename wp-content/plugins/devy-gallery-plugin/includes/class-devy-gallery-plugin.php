@@ -20,15 +20,23 @@ class Devy_Gallery_Plugin{
     //add metabox
 
     public function addMetaBox(){
-        add_meta_box{
+        add_meta_box(
             'Devy_gallery_meta_box',
-            'Devy Gallery',
+            'Add Image',
             array($this, 'renderMetaBox'),
-            'devy_gallery',
+            'devy_gallery_plugin',
             'normal',
             'high'
-        };
+        );
 
+    }
+
+    //metabox
+    public function renderMetaBox($post){
+        ob_start();
+        include_once DEVY_GALLERY_PLUGIN_DIR . '/templates/add_images.php';
+        $output = ob_get_clean();
+        echo $output;
     }
 
     public function registerPostType(){
@@ -48,7 +56,7 @@ class Devy_Gallery_Plugin{
             'search_items'       => 'Search Galleries',
             'parent_item_colon'  => 'Parent Gallery:',
             'not_found'          => 'No Gallery found.',
-            'not_found_in_trash' => 'No Gallery found in Trash.',
+            'not_found_in_trash' => 'No Gallery found in Trash.'
         ];
         
         //args
